@@ -76,6 +76,17 @@
   border: none;
   cursor: pointer;
   z-index: 3;
+  transition: 300ms all ease-in-out;
+}
+
+.confirm_button svg {
+  color: white;
+  font-size: 17px;
+  line-height: calc(100% - 15px);
+}
+
+.confirm_button:hover {
+  background-color: #eb7686;
 }
 
 .title {

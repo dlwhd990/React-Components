@@ -1,8 +1,98 @@
 .calendar {
   width: 700px;
-  height: 500px;
+  height: 400px;
   background-color: white;
   box-shadow: 0 0 10px rgb(226, 222, 222);
   border-radius: 20px;
   transform: translateY(10px);
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.container {
+  width: 50%;
+  text-align: center;
+  padding: 30px;
+}
+
+.calendar .container h2 {
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.container table {
+  width: 100%;
+  font-size: 14px;
+}
+
+.yoil {
+  color: #687074;
+  cursor: default;
+}
+
+.left {
+  position: absolute;
+  top: 26px;
+  left: 30px;
+  padding: 7px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.right {
+  position: absolute;
+  top: 26px;
+  right: 30px;
+  padding: 7px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.left:hover,
+.right:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.date_row td {
+  height: 37px;
+  line-height: 38px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #2c3e50;
+}
+
+.date_row td:hover {
+  color: #b8e8fc;
+}
+
+.selected {
+  background-color: rgb(244, 244, 244);
+}
+
+.date_box {
+  width: 40px;
+  height: 40px;
+}
+
+.start {
+  border-radius: 50% 0 0 50%;
+}
+
+.end {
+  border-radius: 0 50% 50% 0;
+}
+
+.selected .date_box {
+  background-color: #2f3438;
+  color: white !important;
+  border-radius: 50%;
+}
+
+.included {
+  background-color: rgb(244, 244, 244);
 }

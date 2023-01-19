@@ -4,7 +4,8 @@
   margin: 100px auto;
 }
 
-.date_range * {
+.date_range p,
+.date_range h2 {
   margin: 0;
   padding: 0;
 }

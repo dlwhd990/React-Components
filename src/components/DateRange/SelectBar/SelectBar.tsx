@@ -1,19 +1,17 @@
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { SelectBarInterface } from "../model/interfaces";
 import styles from "./SelectBar.module.css";
-
-interface SelectBarInterface {
-  onDateSelectClickHandler: (query: string) => void;
-  onItemSelectClickHandler: () => void;
-  calendarOn: string;
-  itemSelectOn: boolean;
-  selectedItem: string;
-}
 
 const SelectBar: React.FC<SelectBarInterface> = ({
   onDateSelectClickHandler,
   onItemSelectClickHandler,
+  callBack,
   calendarOn,
   itemSelectOn,
   selectedItem,
+  startDate,
+  endDate,
 }) => {
   return (
     <div
@@ -41,7 +39,11 @@ const SelectBar: React.FC<SelectBarInterface> = ({
         onClick={() => onDateSelectClickHandler("start")}
       >
         <p className={styles.title}>시작일</p>
-        <p className={styles.value}>날짜 입력</p>
+        <p className={styles.value}>
+          {startDate.year > 0
+            ? `${startDate.month + 1}월 ${startDate.date}일`
+            : "날짜 입력"}
+        </p>
       </div>
       <div
         className={`${styles.end} ${
@@ -50,9 +52,15 @@ const SelectBar: React.FC<SelectBarInterface> = ({
         onClick={() => onDateSelectClickHandler("end")}
       >
         <p className={styles.title}>종료일</p>
-        <p className={styles.value}>날짜 입력</p>
+        <p className={styles.value}>
+          {endDate.year > 0
+            ? `${endDate.month + 1}월 ${endDate.date}일`
+            : "날짜 입력"}
+        </p>
       </div>
-      <button className={styles.confirm_button}></button>
+      <button className={styles.confirm_button} onClick={callBack}>
+        <FontAwesomeIcon icon={faMagnifyingGlass} />
+      </button>
     </div>
   );
 };

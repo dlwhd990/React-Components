@@ -1,6 +1,6 @@
-import React from "react";
 import "./App.css";
 import DateRange from "./components/DateRange/DateRange";
+import { ResultInterface } from "./components/DateRange/model/interfaces";
 
 function App() {
   const itemList = [
@@ -20,9 +20,14 @@ function App() {
     "전북",
     "제주",
   ];
+
+  const dateRangeCallBack = (result: ResultInterface) => {
+    console.log("콜백함수로 선택 결과 데이터 사용 가능 (추상화)");
+    console.log(result);
+  };
   return (
     <div className="App">
-      <DateRange itemList={itemList} />
+      <DateRange itemList={itemList} callBack={dateRangeCallBack} />
     </div>
   );
 }
