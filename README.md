@@ -1,46 +1,50 @@
-# Getting Started with Create React App
+## Date Range (날짜 기간 선택)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
 
-## Available Scripts
+> 날짜를 기간으로 선택하고 싶을 때 (시작일 - 마감일) 사용합니다.
 
-In the project directory, you can run:
+<br>
 
-### `yarn start`
+### 요구 기능
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. 사용자가 선택한 연-월에 맞는 달력이 출력된다. (시작은 실제 날짜에 해당하는 연-월)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. 시작일을 선택한다. 시작일을 선택하면 자동으로 마감일 선택으로 넘어간다.
 
-### `yarn test`
+3. 시작일이 선택된 상태에서 마감일이 선택되면 달력 상에 색칠된 상태로 기간을 표시한다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. 마감일부터 선택할 수 있다. 이 경우에는 마감일을 선택하면 시작일 선택으로 넘어간다.
 
-### `yarn build`
+5. 두 날짜를 모두 선택하고 결정 버튼을 누르면 시작일과 마감일의 정보가 callback 함수로 넘어간다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+6. 날짜 외에 다른 정보도 함께 선택하도록 하고싶을 수 있다. 이를 props로 받아 출력하고, 선택한 내용을 반환하도록 한다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 사용 예시
 
-### `yarn eject`
+![use](./public/images/dateRangeUse.webp)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<br>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 사용 방법
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![image](./public/images/dateRange1.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- itemTitle = 위의 사용예시의 '렌터카'와 같이, 사용자가 직접 제목을 설정합니다.
+- itemList = 사용자가 넣고 싶은 리스트를 넣습니다. (아직은 string[]만 사용 가능합니다.)
+- callBack = DateRange로 부터 반환된 결과를 받아올 수 있는 콜백함수입니다.
 
-## Learn More
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![image](./public/images/dateRange2.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+위의 3가지 항목을 모두 선택 완료한 후 오른쪽의 버튼을 누르면 콜백함수가 실행됩니다.
+
+사용자는 이 콜백함수를 사용하여 결과 데이터를 자신이 원하는 방식으로 사용할 수 있습니다.
+
+> [result 프로퍼티]<br><br>
+> item: string<br>
+> start: {year: number, month: number, date: number} (month의 경우 실제 달 - 1)<br>
+> end: {year: number, month: number, date: number} (month의 경우 실제 달 - 1)
