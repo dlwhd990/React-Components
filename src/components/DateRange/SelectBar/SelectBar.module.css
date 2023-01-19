@@ -67,6 +67,10 @@
   position: relative;
 }
 
+.end:hover::after {
+  visibility: hidden;
+}
+
 .confirm_button {
   height: calc(100% - 15px);
   aspect-ratio: 1/1;
@@ -97,10 +101,20 @@
   font-size: 15px;
   font-weight: 700;
   margin-bottom: 0.2px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
 }
 
 .value {
   font-size: 14px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
 }
 
 .select_on {
