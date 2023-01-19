@@ -4,7 +4,7 @@
   background-color: white;
   box-shadow: 0 0 10px rgb(226, 222, 222);
   border-radius: 20px;
-  transform: translateY(10px);
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -98,4 +98,28 @@
 .included {
   background-color: rgb(244, 244, 244);
   transition: 160ms all ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .calendar {
+    width: 100%;
+    height: auto;
+  }
+
+  .next {
+    display: none;
+  }
+
+  .container {
+    width: 350px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }

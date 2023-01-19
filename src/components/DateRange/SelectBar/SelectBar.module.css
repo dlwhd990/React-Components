@@ -114,3 +114,33 @@
 .select_on:hover {
   background-color: white !important;
 }
+
+@media screen and (max-width: 768px) {
+  .select_bar {
+    width: 100%;
+  }
+  .item_select,
+  .start,
+  .end {
+    flex-basis: 33.33%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .select_bar {
+    position: initial;
+  }
+  .confirm_button {
+    top: auto;
+    right: auto;
+    bottom: -80px;
+    width: 100%;
+    height: 3rem;
+    border-radius: 10px;
+    transition: none;
+  }
+
+  .confirm_button svg {
+    font-size: 20px;
+  }
+}

@@ -31,9 +31,11 @@ const Calendar: React.FC<CalendarInterface> = ({
     for (let i = 0; i < targetDate.getDay(); i++) {
       result.push({ year: -i, month: -i, date: -i });
     }
+
     for (let i = 0; i < dayCountList[month]; i++) {
       result.push({ year, month, date: i + 1 });
     }
+
     if (
       month === 1 &&
       ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0)
@@ -166,16 +168,6 @@ const Calendar: React.FC<CalendarInterface> = ({
 
   return (
     <div className={styles.calendar}>
-      <FontAwesomeIcon
-        icon={faAngleLeft}
-        className={styles.left}
-        onClick={() => changeShowDate(true)}
-      />
-      <FontAwesomeIcon
-        icon={faAngleRight}
-        className={styles.right}
-        onClick={() => changeShowDate(false)}
-      />
       <div className={styles.container}>
         <h2>{`${showDate.year}년 ${showDate.month + 1}월`}</h2>
         <table className={styles.table}>
@@ -197,8 +189,18 @@ const Calendar: React.FC<CalendarInterface> = ({
             {makeCalendar(dayList.slice(35, 42))}
           </tbody>
         </table>
+        <FontAwesomeIcon
+          icon={faAngleLeft}
+          className={styles.left}
+          onClick={() => changeShowDate(true)}
+        />
+        <FontAwesomeIcon
+          icon={faAngleRight}
+          className={styles.right}
+          onClick={() => changeShowDate(false)}
+        />
       </div>
-      <div className={styles.container}>
+      <div className={`${styles.container} ${styles.next}`}>
         <h2>
           {showDate.month === 11
             ? `${showDate.year + 1}년 1월`

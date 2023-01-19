@@ -1,11 +1,28 @@
 /* 임시 */
 .date_range {
   width: 700px;
+  height: auto;
   margin: 100px auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .date_range p,
 .date_range h2 {
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .date_range {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .date_range {
+    position: relative;
+  }
 }
