@@ -7,6 +7,7 @@ export interface DateInterface {
 
 export interface DateRangeInterface {
   itemList: string[];
+  itemTitle: string;
   callBack: (result: ResultInterface) => void;
 }
 
@@ -19,6 +20,7 @@ export interface SelectBarInterface {
   selectedItem: string;
   startDate: DateInterface;
   endDate: DateInterface;
+  itemTitle: string;
 }
 
 export interface CalendarInterface {

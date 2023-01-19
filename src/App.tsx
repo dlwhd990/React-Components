@@ -27,7 +27,11 @@ function App() {
   };
   return (
     <div className="App">
-      <DateRange itemList={itemList} callBack={dateRangeCallBack} />
+      <DateRange
+        itemList={itemList}
+        itemTitle="렌터카"
+        callBack={dateRangeCallBack}
+      />
     </div>
   );
 }

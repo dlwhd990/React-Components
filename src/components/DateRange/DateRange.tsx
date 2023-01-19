@@ -16,7 +16,11 @@ const defaultDate = {
   day: -1,
 };
 
-const DateRange: React.FC<DateRangeInterface> = ({ itemList, callBack }) => {
+const DateRange: React.FC<DateRangeInterface> = ({
+  itemList,
+  itemTitle,
+  callBack,
+}) => {
   // 시작일, 마감일 중 어떤 것을 선택 중인지 (어떤 것에 의해 캘린더가 열렸는지)
   const [calendarOn, setCalendarOn] = useState("");
   const [itemSelectOn, setItemSelectOn] = useState(false);
@@ -72,6 +76,7 @@ const DateRange: React.FC<DateRangeInterface> = ({ itemList, callBack }) => {
       <SelectBar
         calendarOn={calendarOn}
         itemSelectOn={itemSelectOn}
+        itemTitle={itemTitle}
         onDateSelectClickHandler={onDateSelectClickHandler}
         onItemSelectClickHandler={onItemSelectClickHandler}
         selectedItem={selectedItem}

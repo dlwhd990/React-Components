@@ -64,6 +64,7 @@
   font-weight: 500;
   cursor: pointer;
   color: #2c3e50;
+  transition: 160ms all ease-in-out;
 }
 
 .date_row td:hover {
@@ -91,8 +92,10 @@
   background-color: #2f3438;
   color: white !important;
   border-radius: 50%;
+  transition: 160ms all ease-in-out;
 }
 
 .included {
   background-color: rgb(244, 244, 244);
+  transition: 160ms all ease-in-out;
 }

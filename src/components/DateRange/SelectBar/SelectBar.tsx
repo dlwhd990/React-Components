@@ -12,6 +12,7 @@ const SelectBar: React.FC<SelectBarInterface> = ({
   selectedItem,
   startDate,
   endDate,
+  itemTitle,
 }) => {
   return (
     <div
@@ -27,8 +28,8 @@ const SelectBar: React.FC<SelectBarInterface> = ({
         }`}
         onClick={onItemSelectClickHandler}
       >
-        <p className={styles.title}>지역</p>
-        <p className={styles.value}>{selectedItem || "지역 선택"}</p>
+        <p className={styles.title}>{itemTitle}</p>
+        <p className={styles.value}>{selectedItem || `${itemTitle} 선택`}</p>
       </div>
       <div
         className={`${styles.start} ${
