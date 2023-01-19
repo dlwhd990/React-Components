@@ -1,0 +1,8 @@
+.calendar {
+  width: 700px;
+  height: 500px;
+  background-color: white;
+  box-shadow: 0 0 10px rgb(226, 222, 222);
+  border-radius: 20px;
+  transform: translateY(10px);
+}

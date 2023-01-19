@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import DateRange from "./components/DateRange/DateRange";
 
 function App() {
+  const itemList = [
+    "서울",
+    "경기",
+    "인천",
+    "강원",
+    "대전",
+    "대구",
+    "광주",
+    "부산",
+    "충남",
+    "충북",
+    "경남",
+    "경북",
+    "전남",
+    "전북",
+    "제주",
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DateRange itemList={itemList} />
     </div>
   );
 }

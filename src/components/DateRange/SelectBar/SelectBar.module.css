@@ -1,0 +1,100 @@
+.select_bar {
+  width: 700px;
+  /* box-shadow: 0 0 8px lightgray; */
+  outline: 1px solid rgb(236, 232, 232);
+  border-radius: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.calendar_off {
+  background-color: white;
+}
+
+.calendar_on {
+  background-color: rgb(244, 244, 244);
+}
+
+.select_bar div {
+  padding: 10px 26px;
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+.calendar_off div:hover {
+  background-color: rgb(244, 244, 244);
+}
+
+.calendar_on div:hover {
+  background-color: rgba(138, 136, 136, 0.1);
+}
+
+.item_select {
+  flex-basis: 40%;
+  height: 100%;
+}
+
+.start {
+  flex-basis: 30%;
+  height: 100%;
+  position: relative;
+}
+
+.calendar_off .start::after,
+.calendar_off .end::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 1px;
+  height: 60%;
+  background-color: lightgray;
+}
+
+.start:hover::after {
+  visibility: hidden;
+}
+
+.end {
+  flex-basis: 30%;
+  height: 100%;
+  position: relative;
+}
+
+.confirm_button {
+  height: calc(100% - 15px);
+  aspect-ratio: 1/1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 7.5px;
+  background-color: #ff8e9e;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 0.2px;
+}
+
+.value {
+  font-size: 14px;
+}
+
+.select_on {
+  background-color: white;
+  box-shadow: 0 0 10px rgb(226, 222, 222);
+  padding: 0 10px;
+  z-index: 2;
+}
+
+.select_on:hover {
+  background-color: white !important;
+}

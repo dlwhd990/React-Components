@@ -1,0 +1,10 @@
+/* 임시 */
+.date_range {
+  width: 700px;
+  margin: 100px auto;
+}
+
+.date_range * {
+  margin: 0;
+  padding: 0;
+}

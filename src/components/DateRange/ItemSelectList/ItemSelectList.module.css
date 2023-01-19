@@ -1,0 +1,23 @@
+.list {
+  width: 300px;
+  height: 350px;
+  outline: 1px solid rgb(236, 232, 232);
+  border-radius: 20px;
+  transform: translateY(10px);
+  padding: 16px;
+  list-style: none;
+  box-shadow: 0 0 10px rgb(226, 222, 222);
+  overflow-y: scroll;
+}
+
+.list li {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.list li:hover {
+  background-color: hsla(13, 85%, 92%, 0.5);
+  color: #ff6464;
+}
