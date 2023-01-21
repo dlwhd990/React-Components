@@ -4,6 +4,7 @@ import Carousel from "./components/Carousel/Carousel";
 import DateRange from "./components/DateRange/DateRange";
 import { ResultInterface } from "./components/DateRange/model/interfaces";
 import MainPage from "./components/MainPage/MainPage";
+import imageList from "./imageList";
 
 function App() {
   const itemList = [
@@ -42,7 +43,19 @@ function App() {
             />
           }
         />
-        <Route path="carousel" element={<Carousel />} />
+        <Route
+          path="carousel"
+          element={
+            <Carousel
+              imageList={imageList}
+              duration={300}
+              imageWidth={700}
+              imageMargin={15}
+              imageHeight={400}
+              sideWidth={100}
+            />
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
