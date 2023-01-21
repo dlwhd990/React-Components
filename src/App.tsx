@@ -1,3 +1,4 @@
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Carousel from "./components/Carousel/Carousel";
@@ -29,6 +30,7 @@ function App() {
     console.log("콜백함수로 선택 결과 데이터 사용 가능 (추상화)");
     console.log(result);
   };
+
   return (
     <BrowserRouter>
       <Routes>
@@ -49,10 +51,20 @@ function App() {
             <Carousel
               imageList={imageList}
               duration={300}
-              imageWidth={700}
-              imageMargin={15}
-              imageHeight={400}
-              sideWidth={100}
+              imageWidth={390}
+              imageMargin={0}
+              imageHeight={190}
+              sideWidth={0}
+              translateX={0}
+              arrowShowType="hover"
+              arrowLeftIcon={faAngleLeft}
+              arrowRightIcon={faAngleRight}
+              arrowSize={17}
+              arrowButtonSize={40}
+              arrowButtonBackGroundColor="white"
+              dotSize={10}
+              autoPlay={true}
+              autoPlayDelay={2000}
             />
           }
         />
