@@ -1,6 +1,9 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import Carousel from "./components/Carousel/Carousel";
 import DateRange from "./components/DateRange/DateRange";
 import { ResultInterface } from "./components/DateRange/model/interfaces";
+import MainPage from "./components/MainPage/MainPage";
 
 function App() {
   const itemList = [
@@ -26,13 +29,22 @@ function App() {
     console.log(result);
   };
   return (
-    <div className="App">
-      <DateRange
-        itemList={itemList}
-        itemTitle="렌터카"
-        callBack={dateRangeCallBack}
-      />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route
+          path="/daterange"
+          element={
+            <DateRange
+              itemList={itemList}
+              itemTitle="렌터카"
+              callBack={dateRangeCallBack}
+            />
+          }
+        />
+        <Route path="carousel" element={<Carousel />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
