@@ -51,11 +51,11 @@ function App() {
             <Carousel
               imageList={imageList}
               duration={300}
-              imageWidth={390}
-              imageMargin={0}
-              imageHeight={190}
-              sideWidth={0}
-              translateX={0}
+              imageWidth={375}
+              imageMargin={1}
+              imageHeight={180}
+              sideWidth={200}
+              translateX={175}
               arrowShowType="hover"
               arrowLeftIcon={faAngleLeft}
               arrowRightIcon={faAngleRight}

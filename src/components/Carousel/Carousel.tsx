@@ -167,7 +167,6 @@ const Carousel: React.FC<CarouselProps> = ({
             document.addEventListener("mouseup", onMouseUp, { once: true });
           }}
           // 모바일 터치 대응
-
           onTouchStart={(downEvent: React.TouchEvent) => {
             clearTimeout(timer);
             setTransitionOn(false);

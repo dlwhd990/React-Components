@@ -1,9 +1,11 @@
 .carousel {
   margin: auto;
+  margin-top: 300px;
   overflow: hidden;
   position: relative;
   /* -webkit-user-drag: none; */
 }
+
 .carousel_list {
   display: flex;
   flex-direction: row;
