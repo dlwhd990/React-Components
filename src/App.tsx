@@ -49,18 +49,16 @@ function App() {
           element={
             <Carousel
               imageList={imageList}
-              // carouselWidth={"100%"}
-              // imageWidth={375}
-              // imageMargin={1}
-              // imageHeight={180}
-              // sideWidth={200}
-              // translateX={175}
-              // arrowShowType="hover"
-              // arrowSize={17}
-              // arrowButtonSize={40}
-              // dotSize={10}
-              // autoPlay={true}
-              // autoPlayDelay={2000}
+              imageWidth={400}
+              imageMargin={1}
+              imageHeight={200}
+              arrowPosition={0}
+              arrowSize={14}
+              arrowButtonSize={30}
+              showDot={true}
+              arrowShowType="none"
+              sideWidth={200}
+              translateX={0}
             />
           }
         />
@@ -70,3 +68,16 @@ function App() {
 }
 
 export default App;
+
+// carouselWidth={"100%"}
+// imageWidth={375}
+// imageMargin={1}
+// imageHeight={180}
+// sideWidth={200}
+// translateX={175}
+// arrowShowType="hover"
+// arrowSize={17}
+// arrowButtonSize={40}
+// dotSize={10}
+// autoPlay={true}
+// autoPlayDelay={2000}
