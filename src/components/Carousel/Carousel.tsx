@@ -11,24 +11,26 @@ import { CarouselProps } from "./interface";
 let clicked = false;
 let timer: ReturnType<typeof setTimeout>;
 
-const Carousel: React.FC<CarouselProps> = ({
-  imageList,
-  duration,
-  imageWidth,
-  imageMargin,
-  imageHeight,
-  sideWidth,
-  translateX,
-  arrowShowType,
-  arrowLeftIcon,
-  arrowRightIcon,
-  arrowSize,
-  arrowButtonSize,
-  arrowButtonBackGroundColor,
-  dotSize,
-  autoPlay,
-  autoPlayDelay,
-}) => {
+const Carousel: React.FC<CarouselProps> = (props) => {
+  // defaultValue에 대비
+  let duration = props.duration || 300;
+  let imageWidth = props.imageWidth || 375;
+  let imageMargin = props.imageMargin || 0;
+  let imageHeight = props.imageHeight || 180;
+  let sideWidth = props.sideWidth || 0;
+  let translateX = props.translateX || 0;
+  let arrowShowType = props.arrowShowType || "static";
+  let arrowLeftIcon = props.arrowLeftIcon || faAngleLeft;
+  let arrowRightIcon = props.arrowRightIcon || faAngleRight;
+  let arrowSize = props.arrowSize || 17;
+  let arrowButtonSize = props.arrowButtonSize || 40;
+  let arrowButtonBackGroundColor = props.arrowButtonBackGroundColor || "white";
+  let dotSize = props.dotSize || 10;
+  let autoPlay = props.autoPlay || false;
+  let autoPlayDelay = props.autoPlayDelay || 2000;
+
+  // 무한 슬라이드를 위한 imageList 변경 작업
+  let { imageList } = props;
   imageList = imageList
     .slice(imageList.length - 2)
     .concat(imageList)
@@ -37,6 +39,7 @@ const Carousel: React.FC<CarouselProps> = ({
   imageList = imageList.map((image, index) => {
     return { ...image, id: index };
   });
+
   const [idx, setIdx] = useState(2);
   const [dragTrans, setDragTrans] = useState(0);
   const [translateValue, setTranslateValue] = useState(
@@ -127,7 +130,12 @@ const Carousel: React.FC<CarouselProps> = ({
     <div className={styles.container}>
       <div
         className={styles.carousel}
-        style={{ width: `${imageWidth + imageMargin * 4 + sideWidth * 2}px` }}
+        style={{
+          width: `${
+            props.carouselWidth ||
+            `${imageWidth + imageMargin * 4 + sideWidth * 2}px`
+          }`,
+        }}
       >
         <div
           className={styles.carousel_list}

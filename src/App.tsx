@@ -1,4 +1,3 @@
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Carousel from "./components/Carousel/Carousel";
@@ -50,21 +49,18 @@ function App() {
           element={
             <Carousel
               imageList={imageList}
-              duration={300}
-              imageWidth={375}
-              imageMargin={1}
-              imageHeight={180}
-              sideWidth={200}
-              translateX={175}
-              arrowShowType="hover"
-              arrowLeftIcon={faAngleLeft}
-              arrowRightIcon={faAngleRight}
-              arrowSize={17}
-              arrowButtonSize={40}
-              arrowButtonBackGroundColor="white"
-              dotSize={10}
-              autoPlay={true}
-              autoPlayDelay={2000}
+              // carouselWidth={"100%"}
+              // imageWidth={375}
+              // imageMargin={1}
+              // imageHeight={180}
+              // sideWidth={200}
+              // translateX={175}
+              // arrowShowType="hover"
+              // arrowSize={17}
+              // arrowButtonSize={40}
+              // dotSize={10}
+              // autoPlay={true}
+              // autoPlayDelay={2000}
             />
           }
         />
