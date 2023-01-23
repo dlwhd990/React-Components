@@ -167,7 +167,11 @@ const Calendar: React.FC<CalendarInterface> = ({
   }, [showDate]);
 
   return (
-    <div className={styles.calendar}>
+    <div
+      className={`${styles.calendar} ${
+        calendarOn ? `${styles.on}` : `${styles.off}`
+      }`}
+    >
       <div className={styles.container}>
         <h2>{`${showDate.year}년 ${showDate.month + 1}월`}</h2>
         <table className={styles.table}>

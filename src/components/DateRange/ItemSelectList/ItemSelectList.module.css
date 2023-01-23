@@ -7,7 +7,20 @@
   list-style: none;
   box-shadow: 0 0 10px rgb(226, 222, 222);
   overflow-y: scroll;
-  margin: 10px 0;
+  transition: 300ms all ease-in-out;
+  position: absolute;
+  top: 41px;
+}
+.off {
+  opacity: 0;
+  transform: translateY(5px);
+  visibility: hidden;
+}
+
+.on {
+  opacity: 1;
+  transform: translateY(15px);
+  visibility: visible;
 }
 
 .list li {

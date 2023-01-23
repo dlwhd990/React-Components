@@ -1,7 +1,7 @@
 .select_bar {
   width: 700px;
   /* box-shadow: 0 0 8px lightgray; */
-  outline: 1px solid rgb(236, 232, 232);
+  border: 1px solid rgb(236, 232, 232);
   border-radius: 32px;
   display: flex;
   flex-direction: row;
@@ -72,8 +72,8 @@
 }
 
 .confirm_button {
-  height: calc(100% - 15px);
-  aspect-ratio: 1/1;
+  width: 43px;
+  height: 43px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
