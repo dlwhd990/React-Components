@@ -4,22 +4,12 @@
   background-color: white;
   box-shadow: 0 0 10px rgb(226, 222, 222);
   border-radius: 20px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: row;
   position: relative;
-  transition: 300ms all ease-in-out;
-}
-
-.off {
-  opacity: 0;
-  transform: translateY(5px);
-  visibility: collapse;
-}
-
-.on {
-  opacity: 1;
   transform: translateY(15px);
-  visibility: visible;
+  animation: 300ms appear;
 }
 
 .container {
@@ -133,5 +123,14 @@
   .container {
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(15px);
   }
 }

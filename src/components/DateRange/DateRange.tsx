@@ -84,18 +84,18 @@ const DateRange: React.FC<DateRangeInterface> = ({
         endDate={endDate}
         callBack={showSelectedDateRange}
       />
-      <Calendar
-        calendarOn={calendarOn}
-        settingStartDate={settingStartDate}
-        settingEndDate={settingEndDate}
-        startDate={startDate}
-        endDate={endDate}
-      />
-      <ItemSelectList
-        itemList={itemList}
-        itemSelectOn={itemSelectOn}
-        selectItem={selectItem}
-      />
+      {calendarOn && (
+        <Calendar
+          calendarOn={calendarOn}
+          settingStartDate={settingStartDate}
+          settingEndDate={settingEndDate}
+          startDate={startDate}
+          endDate={endDate}
+        />
+      )}
+      {itemSelectOn && (
+        <ItemSelectList itemList={itemList} selectItem={selectItem} />
+      )}
     </div>
   );
 };

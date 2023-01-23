@@ -7,20 +7,9 @@
   list-style: none;
   box-shadow: 0 0 10px rgb(226, 222, 222);
   overflow-y: scroll;
-  transition: 300ms all ease-in-out;
-  position: absolute;
-  top: 41px;
-}
-.off {
-  opacity: 0;
-  transform: translateY(5px);
-  visibility: hidden;
-}
-
-.on {
-  opacity: 1;
+  margin: 0;
   transform: translateY(15px);
-  visibility: visible;
+  animation: 300ms appear;
 }
 
 .list li {
@@ -38,5 +27,14 @@
 @media screen and (max-width: 460px) {
   .list {
     width: 100%;
+  }
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(15px);
   }
 }
