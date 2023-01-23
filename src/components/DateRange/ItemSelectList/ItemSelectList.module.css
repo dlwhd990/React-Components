@@ -1,7 +1,7 @@
 .list {
   width: 300px;
   height: 350px;
-  outline: 1px solid rgb(236, 232, 232);
+  border: 1px solid rgb(236, 232, 232);
   border-radius: 20px;
   padding: 16px;
   list-style: none;
