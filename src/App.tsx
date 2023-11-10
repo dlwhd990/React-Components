@@ -78,7 +78,7 @@ function App() {
               arrowSize={14}
               arrowButtonSize={30}
               showDot={true}
-              arrowShowType="none"
+              arrowShowType="static"
               sideWidth={200}
               translateX={0}
             />
@@ -92,8 +92,8 @@ function App() {
                 setItemPage((state) => state + 1);
               }}
             >
-              {infList.map((item) => (
-                <div key={item.id} className="villager_item">
+              {infList.map((item, idx) => (
+                <div key={idx} className="villager_item">
                   <img src={item.icon_uri} alt="villager_icon" />
                   <div className="villager_data">
                     <p>{`${item.name["name-KRko"]} | ${item.gender}`}</p>

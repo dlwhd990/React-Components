@@ -1,5 +1,4 @@
 import { ReactNode, useCallback, useEffect, useState } from "react";
-import { callbackify } from "util";
 import styles from "./InfinityScroll.module.css";
 
 const InfinityScroll: React.FC<{
@@ -16,6 +15,7 @@ const InfinityScroll: React.FC<{
       const scrollTop = document.documentElement.scrollTop;
       const scrollHeight = document.documentElement.scrollHeight;
       const clientHeight = window.innerHeight;
+      // console.log(scrollTop, scrollHeight, clientHeight);
 
       if (scrollTop + clientHeight >= scrollHeight) {
         console.log("BBOOM");
